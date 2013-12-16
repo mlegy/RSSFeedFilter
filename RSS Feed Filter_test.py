@@ -1,9 +1,9 @@
 # RSS Feed Filter Test Suite
 import unittest
 import sys
-from ps7 import *
+from RSSFeedFilter import *
 
-class ProblemSet7NewsStory(unittest.TestCase):
+class RSSFeedFilterNewsStory(unittest.TestCase):
     def setUp(self):
         pass
     def testNewsStoryConstructor(self):
@@ -29,7 +29,7 @@ class ProblemSet7NewsStory(unittest.TestCase):
                           'test summary', 'test link')
         self.assertEquals(story.getLink(), 'test link')
 
-class ProblemSet7(unittest.TestCase):
+class RSSFeedFilter(unittest.TestCase):
     def setUp(self):
         class TrueTrigger:
             def evaluate(self, story): return True
@@ -202,8 +202,8 @@ class ProblemSet7(unittest.TestCase):
 
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(unittest.makeSuite(ProblemSet7NewsStory))
-    suite.addTest(unittest.makeSuite(ProblemSet7))
+    suite.addTest(unittest.makeSuite(RSSFeedFilterNewsStory))
+    suite.addTest(unittest.makeSuite(RSSFeedFilter))
 #    unittest.TextTestRunner(verbosity=2).run(suite)
     unittest.TextTestRunner(verbosity=2, stream=sys.stdout).run(suite)
 
