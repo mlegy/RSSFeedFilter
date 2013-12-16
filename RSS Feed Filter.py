@@ -95,14 +95,14 @@ class NotTrigger(Trigger):
         self.T=T
     def evaluate(self,x):
         return not self.T.evaluate(x)
-# TODO: AndTrigger
+# AndTrigger
 class AndTrigger(Trigger):
     def __init__(self,T1,T2):
         self.T1=T1
         self.T2=T2
     def evaluate(self,x):
         return self.T1.evaluate(x) and self.T2.evaluate(x)
-# TODO: OrTrigger
+# OrTrigger
 class OrTrigger(Trigger):
     def __init__(self,T1,T2):
         self.T1=T1
